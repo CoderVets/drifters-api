@@ -1,10 +1,10 @@
-#Drifters Web API
+# Drifters Web API
 
-##Introduction
+## Introduction
 
 This web API utilizes python and another API called OpenDrift located at https://github.com/OpenDrift/opendrift to calculate leeway drift of objects at sea.
 
-##Installation and Execution
+## Installation and Execution
 
 Install OpenDrift by following the instructions in the projects README file.
 
