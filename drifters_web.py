@@ -1,13 +1,11 @@
 from flask import Flask, make_response
 from flask_restful import Resource, Api, abort, reqparse
-from flask_oauthlib.provider import OAuth2Provider
 from opendrift.readers import reader_basemap_landmask
 from opendrift.readers import reader_netCDF_CF_generic
 from opendrift.models.leeway import Leeway
 import StringIO
 
 app = Flask(__name__)
-oauth = OAuth2Provider(app)
 api = Api(app)
 
 class DrifterApi(Resource):
@@ -76,5 +74,5 @@ class DrifterApi(Resource):
 api.add_resource(DrifterApi, '/')
 
 if __name__ == '__main__':
-    app.run(ssl_context=('cert.pem', 'key.pem'))
+    app.run(debug=True)
 
